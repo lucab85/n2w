@@ -1,0 +1,4 @@
+num2words==0.5.5
+Flask==0.12.2
+flask_api==1.1b1
+flask_httpauth==3.2.3
