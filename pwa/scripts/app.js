@@ -117,7 +117,7 @@
    ****************************************************************************/
 
   app.getN2W = function(key, label) {
-	var url = 'https://n2w.mrevolution.eu/n2w/api/v1.0/get/' + key;
+	var url = 'https://number2word.appspot.com/n2w/api/v1.0/get/' + key;
     if ('caches' in window) {
       caches.match(url).then(function(response) {
         if (response) {

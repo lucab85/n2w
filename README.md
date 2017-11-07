@@ -9,7 +9,7 @@ A simple "number to word" service composed by a backend API service
 ## frontend PWA
 
 Host static assets wherever you want and edit appropriately the website
-URL (`https://n2w.mrevolution.eu`) in source code.
+URL (`https://number2word.appspot.com`) in source code.
 
 
 ## backend API service
