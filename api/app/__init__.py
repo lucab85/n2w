@@ -7,7 +7,7 @@ from num2words import num2words
 import datetime
 
 # local import
-from instance.config import app_config
+from settings.config import app_config
 
 app = Flask(__name__, static_url_path = "")
 auth = HTTPBasicAuth()
