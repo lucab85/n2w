@@ -1,5 +1,7 @@
 # Number to word (n2w)
 
+![n2w logo](logo.png)
+
 A simple "number to word" service composed by a backend API service 
 (python Flask powered) and a frontend PWA (Progressive Web Application).
 
