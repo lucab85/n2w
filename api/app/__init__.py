@@ -3,6 +3,7 @@
 from flask_api import FlaskAPI
 from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask_httpauth import HTTPBasicAuth
+from flask_cors import CORS, cross_origin
 from num2words import num2words
 import datetime
 
@@ -10,6 +11,8 @@ import datetime
 from settings.config import app_config
 
 app = Flask(__name__, static_url_path = "")
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 auth = HTTPBasicAuth()
 
 def create_app(config_name):
@@ -40,6 +43,7 @@ def not_found(error):
     
 @app.route('/n2w/api/v1.0/get/<int:n>', methods = ['GET'])
 @app.route('/n2w/api/v1.0/get/<int:n>/<string(length=2):l>', methods = ['GET'])
+@cross_origin()
 def get_n2w(n, l='en'):
 	try:
 		v = num2words(n, lang=l)
@@ -47,7 +51,7 @@ def get_n2w(n, l='en'):
 			'number': n,
 			'text': v, 
 			'lang': l,
-			'created': datetime.datetime.now(),
+			'created': datetime.datetime.now().isoformat(),
 		}
 		return jsonify( json )
 	except NotImplementedError as e:
