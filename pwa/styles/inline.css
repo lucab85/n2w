@@ -280,10 +280,10 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1; }
   .n2w .current .lang:before {
-    content: "lang: ";
+    content: "l: ";
     color: #888; }
   .n2w .current .text:before {
-    content: "TXT: ";
+    content: "v: ";
     color: #888; }
 
 .mdl-button {
