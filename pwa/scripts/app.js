@@ -73,7 +73,7 @@
     }
   };
 
-  app.updateForecastCard = function(data) {
+  app.updateN2WCard = function(data) {
     var dataLastUpdated = new Date(data.created);
     var current = data;
 
@@ -126,7 +126,7 @@
             results.key = key;
             results.label = label;
             results.created = json.created;
-            app.updateForecastCard(results);
+            app.updateN2WCard(results);
           });
         }
       });
@@ -140,10 +140,10 @@
           results.key = key;
           results.label = label;
           results.created = response.created;
-          app.updateForecastCard(results);
+          app.updateN2WCard(results);
         }
       } else {
-        app.updateForecastCard(initialN2W);
+        app.updateN2WCard(initialN2W);
       }
     };
     request.open('GET', url);
@@ -165,7 +165,7 @@
   var initialN2W = {
     key: '1234567',
     label: 'Test number',
-    created: '2017-11-07T01:00:00Z',
+    created: '2017-11-08T01:00:00',
 	number: '42',
 	lang: 'it',
 	text: 'quarantadue'
@@ -185,7 +185,7 @@
       app.getN2W(city.key, city.label);
     });
   } else {
-    app.updateForecastCard(initialN2W);
+    app.updateN2WCard(initialN2W);
     app.selectedNumbers = [
       {key: initialN2W.key, label: initialN2W.label}
     ];

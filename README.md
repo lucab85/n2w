@@ -14,8 +14,12 @@ URL (`https://number2word.appspot.com`) in source code.
 
 ## backend API service
 
-### Setup
-`pip install -r requirements.txt`
+### Deploy
+
+In `api` subdirectory:
+* `pip install -r requirements.txt -t lib`
+* `gcloud app deploy`
+
 
 ### Usage
 
@@ -34,4 +38,3 @@ Reply (JSON):
 'created': 2017-11-07T01:00:00Z,
 }
 ```
-

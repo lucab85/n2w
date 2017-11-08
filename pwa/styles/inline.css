@@ -279,83 +279,12 @@ body {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
-  .n2w .current .sunset:before {
-    content: "Sunset: ";
+  .n2w .current .lang:before {
+    content: "lang: ";
     color: #888; }
-  .n2w .current .wind:before {
-    content: "Wind: ";
+  .n2w .current .text:before {
+    content: "TXT: ";
     color: #888; }
-  .n2w .current .sunrise:before {
-    content: "Sunrise: ";
-    color: #888; }
-  .n2w .current .humidity:before {
-    content: "Umidità: ";
-    color: #888; }
-  .n2w .current .pollen:before {
-    content: "Pollen Count: ";
-    color: #888; }
-  .n2w .current .pcount:before {
-    content: "Pollen ";
-    color: #888; }
-
-.n2w .future {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .n2w .future .oneday {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: center; }
-    .n2w .future .oneday .icon {
-      width: 64px;
-      height: 64px;
-      margin-left: auto;
-      margin-right: auto; }
-    .n2w .future .oneday .temp-high, .n2w .future .oneday .temp-low {
-      display: inline-block; }
-    .n2w .future .oneday .temp-low {
-      color: #888; }
-
-.n2w .icon {
-  background-repeat: no-repeat;
-  background-size: contain; }
-  .n2w .icon.clear-day {
-    background-image: url("/images/clear.png"); }
-  .n2w .icon.clear-night {
-    background-image: url("/images/clear.png"); }
-  .n2w .icon.rain {
-    background-image: url("/images/rain.png"); }
-  .n2w .icon.snow {
-    background-image: url("/images/snow.png"); }
-  .n2w .icon.sleet {
-    background-image: url("/images/sleet.png"); }
-  .n2w .icon.windy {
-    background-image: url("/images/wind.png"); }
-  .n2w .icon.fog {
-    background-image: url("/images/fog.png"); }
-  .n2w .icon.cloudy {
-    background-image: url("/images/cloudy.png"); }
-  .n2w .icon.partly-cloudy-day {
-    background-image: url("/images/partly-cloudy.png"); }
-  .n2w .icon.partly-cloudy-night {
-    background-image: url("/images/partly-cloudy.png"); }
-  .n2w .icon.thunderstorms {
-    background-image: url("/images/thunderstorm.png"); }
-
-@media (max-width: 450px) {
-  .n2w .date, .n2w .description {
-    font-size: 0.9em; }
-  .n2w .current .icon {
-    width: 96px;
-    height: 96px; }
-  .n2w .current .visual {
-    font-size: 3em; }
-  .n2w .future .oneday .icon {
-    width: 32px;
-    height: 32px; } }
 
 .mdl-button {
   background: transparent;
