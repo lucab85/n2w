@@ -12,20 +12,18 @@ from settings.config import app_config
 
 app = Flask(__name__, static_url_path = "")
 cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
 auth = HTTPBasicAuth()
 
 def create_app(config_name):
     #app = FlaskAPI(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
-
     return app
 
 @auth.get_password
 def get_password(username):
     if username == 'production':
-        return 'python'
+        return 'password'
     return None
 
 @auth.error_handler
@@ -34,7 +32,7 @@ def unauthorized():
     # return 403 instead of 401 to prevent browsers from displaying the default auth dialog
     
 @app.errorhandler(400)
-def not_found(error):
+def bad_request(error):
     return make_response(jsonify( { 'error': 'Bad request' } ), 400)
 
 @app.errorhandler(404)
@@ -57,7 +55,7 @@ def get_n2w(n, l='en'):
 		}
 		return jsonify( json )
 	except NotImplementedError as e:
-		return not_found(400)
+		return bad_request(400)
 
 @app.route('/n2w/api/v1.0/langs', methods = ['GET'])
 @cross_origin()

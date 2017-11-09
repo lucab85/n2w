@@ -29,7 +29,7 @@ Request (HTTP):
 * NUMBER (mandatory) integer number (eg. `42`)
 * LANGUAGE (optional) two letter language code (eg. `it`) - Default: `en`
 
-Reply (JSON):
+Response (JSON):
 ```
 {
 'number': 42,
