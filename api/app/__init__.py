@@ -43,6 +43,8 @@ def not_found(error):
     
 @app.route('/n2w/api/v1.0/get/<int:n>', methods = ['GET'])
 @app.route('/n2w/api/v1.0/get/<int:n>/<string(length=2):l>', methods = ['GET'])
+@app.route('/n2w/api/v1.0/get/<float:n>', methods = ['GET'])
+@app.route('/n2w/api/v1.0/get/<float:n>/<string(length=2):l>', methods = ['GET'])
 @cross_origin()
 def get_n2w(n, l='en'):
 	try:
