@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lucab85/n2w.svg?branch=master)](https://travis-ci.org/lucab85/n2w)
+
 # Number to word (n2w)
 
 ![n2w logo](logo.png)
