@@ -4,7 +4,7 @@ from flask_api import FlaskAPI
 from flask import Flask, jsonify, abort, request, make_response, url_for
 from flask_httpauth import HTTPBasicAuth
 from flask_cors import CORS, cross_origin
-from num2words import num2words
+from num2words import num2words, CONVERTER_CLASSES
 import datetime
 
 # local import
@@ -56,3 +56,12 @@ def get_n2w(n, l='en'):
 		return jsonify( json )
 	except NotImplementedError as e:
 		return not_found(400)
+
+@app.route('/n2w/api/v1.0/langs', methods = ['GET'])
+@cross_origin()
+def langs():
+	json = {
+		'langs': CONVERTER_CLASSES.keys(),
+		'created': datetime.datetime.now().isoformat(),
+	}
+	return jsonify( json )
